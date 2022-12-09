@@ -1,0 +1,57 @@
+.wrapper {
+    padding: 0 12px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 12px;
+    }
+
+    .control {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        font-size: 12px;
+        margin-top: 12px;
+
+        .active {
+            background-color: var(--purple-primary);
+        }
+
+        .musicType {
+            padding: 4px 24px;
+            border: 1px solid var(--border-primary);
+            border-radius: 100px;
+            font-weight: 400;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-right: 15px;
+            cursor: pointer;
+
+            &:hover {
+                color: rgb(232, 228, 228);
+            }
+        }
+
+        .all {
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                color: var(--purple-primary) !important;
+            }
+
+            .all_title {
+                margin-right: 6px;
+            }
+        }
+    }
+
+    .musics {
+        margin: 12px 0;
+    }
+}

@@ -1,0 +1,140 @@
+:root {
+    --bs-link-hover-color: var(--purple-primary);
+}
+
+.wrapper {
+    overflow: hidden;
+    height: calc(100vh - (var(--control-playMusic) + var(--height-content-header)));
+
+    .placeholder_img {
+        height: 220px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+}
+
+.album_left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .left_img {
+        position: relative;
+        cursor: pointer;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .img {
+            transition: transform 0.3s linear;
+        }
+
+        &:hover {
+            .play {
+                display: flex;
+            }
+
+            .img {
+                transform: scale(1.1);
+            }
+        }
+
+        .play {
+            position: absolute;
+            inset: 0;
+            background-color: var(--bg-cover-img);
+            z-index: 1;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.album_right {
+    height: 100%;
+    overflow: overlay;
+
+    .img {
+        height: 40px;
+        width: 40px;
+        position: relative;
+
+        .control {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-cover-img);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #302f2f, $alpha: 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+
+    .item {
+        padding: 6px 6px;
+        border-radius: 6px;
+        position: relative;
+
+        &.active {
+            background-color: #ffffff1a;
+
+            .control {
+                display: flex;
+            }
+
+            .play {
+                display: none !important;
+            }
+
+            .disable {
+                pointer-events: none;
+            }
+        }
+
+        &:hover {
+            background-color: #ffffff1a;
+            overflow: hidden;
+            .play {
+                display: flex;
+            }
+            .time {
+                display: none;
+            }
+
+            .plush {
+                display: flex;
+            }
+        }
+
+        .plush {
+            display: none;
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translate(50%, -50%);
+        }
+    }
+}

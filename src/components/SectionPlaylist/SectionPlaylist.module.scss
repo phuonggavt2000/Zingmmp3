@@ -1,0 +1,78 @@
+.wrapper {
+    overflow: hidden;
+    padding: 0 12px;
+    position: relative;
+    margin-top: 70px;
+
+    .desc {
+        font-size: 0.9rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        color: var(--text-secondary);
+        margin-top: 6px;
+
+        &.artist {
+            display: none;
+        }
+    }
+
+    .artist_name {
+        white-space: wrap;
+        line-height: normal;
+        display: none;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        color: var(--text-secondary);
+        margin-top: 4px;
+
+        &.artist {
+            display: -webkit-box;
+        }
+    }
+
+    .wrapper_img {
+        position: relative;
+        border-radius: 4px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover {
+            .img {
+                transform: scale(1.1);
+            }
+
+            .control {
+                position: absolute;
+                inset: 0;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba($color: #302f2f, $alpha: 0.5);
+            }
+        }
+
+        .img {
+            transition: transform 0.4s linear;
+            border-radius: 4px;
+        }
+
+        .control {
+            display: none;
+        }
+    }
+
+    .link {
+        font-weight: 600;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        overflow: hidden;
+
+        &:hover {
+            color: var(--purple-primary) !important;
+        }
+    }
+}

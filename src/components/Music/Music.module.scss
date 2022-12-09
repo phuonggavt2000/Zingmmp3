@@ -1,0 +1,74 @@
+.music {
+    border-radius: 5px;
+
+    &:hover {
+        background-color: var(--alpha-bg);
+
+        .play {
+            display: flex !important;
+        }
+    }
+
+    &.active {
+        background-color: var(--alpha-bg);
+
+        .play {
+            display: none !important;
+        }
+
+        .control {
+            display: flex !important;
+        }
+
+        .img {
+            &.disable {
+                pointer-events: none;
+                user-select: none;
+            }
+        }
+    }
+
+    .img {
+        height: 60px;
+        width: 60px;
+        flex-shrink: 0;
+        position: relative;
+        cursor: pointer;
+
+        .play,
+        .control {
+            position: absolute;
+            display: none;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+
+    .desc {
+        display: flex;
+        flex-direction: column;
+        margin-left: 8px;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+
+        .adult {
+            font-size: 12px;
+            color: var(--text-secondary) !important;
+
+            &:hover {
+                color: var(--purple-primary) !important;
+                text-decoration: underline !important;
+            }
+        }
+
+        .time {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+    }
+}

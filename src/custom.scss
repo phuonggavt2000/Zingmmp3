@@ -1,0 +1,67 @@
+/* make the customizations */
+
+$theme-colors: (
+    'primary': #9b4de0,
+    'alpha': #ffffff1a,
+    'transparent': transparent,
+    'border': #ffffff1a,
+    'secondary': #6d6875,
+);
+
+$font-sizes: (
+    7: 14px,
+    8: 11px,
+);
+
+.btn-bd-icon-hover {
+    --bs-btn-hover-bg: var(--alpha-bg) !important;
+}
+
+.border-color-album {
+    border-bottom: 1px solid #ffffff1a;
+}
+
+.text-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.link-hover-primary:hover {
+    color: var(--purple-primary) !important;
+    text-decoration: underline !important;
+}
+
+.link-artist {
+    color: var(--text-secondary) !important;
+    font-size: 14;
+    margin-right: 2px;
+
+    &:not(:last-child):after {
+        content: ',';
+    }
+
+    &:hover {
+        color: var(--purple-primary) !important;
+        text-decoration: underline !important;
+    }
+}
+
+.text-second {
+    color: var(--text-secondary) !important;
+    font-size: 14;
+}
+
+.bg-ct-alpha {
+    background-color: var(--alpha-bg);
+}
+
+.hover-primary:hover {
+    color: var(--purple-primary) !important;
+}
+
+$modal-content-bg: #34224f;
+$secondary: hsla(0, 0%, 100%, 0.5);
+
+/* import bootstrap to set changes */
+@import '~bootstrap/scss/bootstrap';

@@ -1,0 +1,13 @@
+.prev {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: var(--alpha-bg);
+    font-size: 30px;
+    color: white;
+    border-radius: 50%;
+    z-index: 1;
+}

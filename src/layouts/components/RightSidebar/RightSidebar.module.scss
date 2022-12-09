@@ -1,0 +1,53 @@
+.wrapper {
+    width: var(--width-right-sidebar);
+    background-color: transparent;
+    position: fixed;
+    inset: 0 0 0 auto;
+    margin-bottom: var(--control-playMusic);
+    z-index: 11;
+    overflow: hidden;
+    padding: 20px 10px;
+    border-left: solid 1px var(--border-primary);
+    background-color: var(--layout-bg);
+    transition: all linear 0.5s;
+    visibility: hidden;
+    animation: inactive-sidebar 0.5s linear;
+
+    &.active {
+        visibility: initial;
+        animation: active-sidebar 0.5s linear;
+    }
+
+    .transfer {
+        flex: 1;
+        background-color: var(--alpha-bg);
+        border-radius: 20px;
+    }
+
+    .musics {
+        overflow: hidden;
+        height: 100%;
+
+        &:hover {
+            overflow: overlay;
+        }
+    }
+}
+
+@keyframes active-sidebar {
+    0% {
+        transform: translateX(330px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes inactive-sidebar {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(330px);
+    }
+}
