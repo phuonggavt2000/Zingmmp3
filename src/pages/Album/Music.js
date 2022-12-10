@@ -55,10 +55,7 @@ function Music({
                                 <span className="text-white">{title}</span>
                                 <div className="d-flex">
                                     {artists.map((artist, index) => (
-                                        <Link
-                                            key={index}
-                                            className="text-secondary fs-8 link-hover-primary text-nowrap me-1"
-                                        >
+                                        <Link key={index} className="link-artist fs-7">
                                             {artist.name}
                                         </Link>
                                     ))}

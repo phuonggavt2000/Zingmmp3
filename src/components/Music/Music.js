@@ -38,7 +38,7 @@ function Music({ name, adult, time, img, active, onClick, heightImg, widthImg, c
                     <span className=" text-capitalize">{name}</span>
                     <div className="d-flex my-1">
                         {artists.map((artist, index) => (
-                            <Link className="link-artist fs-8">{artist.name}</Link>
+                            <Link className="link-artist fs-7">{artist.name}</Link>
                         ))}
                     </div>
 
