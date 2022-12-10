@@ -82,6 +82,12 @@ function DefaultLayout() {
                 return {
                     ...prev,
                     detailPlaylist: detailPlaylist.data.data,
+                };
+            });
+
+            setData((prev) => {
+                return {
+                    ...prev,
                     loadPage: false,
                 };
             });

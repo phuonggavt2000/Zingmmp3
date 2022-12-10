@@ -7,6 +7,7 @@ import Slides from '../../layouts/components/Slides/Slides';
 import Sponsor from '../../layouts/components/Sponsor/Sponsor';
 import WeekChart from '../../layouts/components/WeekChart/WeekChart';
 import { ThemeContext } from '../../layouts/DefaultLayout/DefaultLayout';
+import { Placeholder } from 'react-bootstrap';
 
 function Discovery() {
     const [top100Discovery, setTop100Discovery] = useState([]);
@@ -25,21 +26,81 @@ function Discovery() {
 
     return (
         <div>
-            <Slides />
-            <NewMusic />
-            <SectionPlaylist title={playlist.title} playlist={playlist.items} getPlaylist={methodGetPlaylist} />
-            <SectionPlaylist
-                title={playlist2.title}
-                playlist={playlist2.items}
-                getPlaylist={methodGetPlaylist}
-                artist
-            />
-            <WeekChart items={weekChart.items} />
-            <Artist artists={artistSpotlight.items} getPlaylist={methodGetPlaylist} />
+            {playlist.items ? (
+                <>
+                    <Slides />
+                    <NewMusic />
+                    <SectionPlaylist title={playlist.title} playlist={playlist.items} getPlaylist={methodGetPlaylist} />
+                    <SectionPlaylist
+                        title={playlist2.title}
+                        playlist={playlist2.items}
+                        getPlaylist={methodGetPlaylist}
+                        artist
+                    />
+                    <WeekChart items={weekChart.items} />
+                    <Artist artists={artistSpotlight.items} getPlaylist={methodGetPlaylist} />
 
-            <SectionPlaylist title={top100.title} playlist={top100Discovery} getPlaylist={methodGetPlaylist} artist />
-            <NewRelease items={newRelease.items} title={newRelease.title} link={newRelease.link} />
-            <Sponsor />
+                    <SectionPlaylist
+                        title={top100.title}
+                        playlist={top100Discovery}
+                        getPlaylist={methodGetPlaylist}
+                        artist
+                    />
+                    <NewRelease items={newRelease.items} title={newRelease.title} link={newRelease.link} />
+                    <Sponsor />
+                </>
+            ) : (
+                <Placeholder className="row w-100 gx-2 gy-2 overflow-hidden" animation="glow">
+                    <div
+                        className="col-4 "
+                        style={{
+                            height: 300,
+                        }}
+                    >
+                        <Placeholder xs={4} className="rounded w-100 h-100" />
+                    </div>{' '}
+                    <div
+                        className="col-4 "
+                        style={{
+                            height: 300,
+                        }}
+                    >
+                        <Placeholder xs={4} className="rounded w-100 h-100" />
+                    </div>{' '}
+                    <div
+                        className="col-4 "
+                        style={{
+                            height: 300,
+                        }}
+                    >
+                        <Placeholder xs={4} className="rounded w-100 h-100" />
+                    </div>{' '}
+                    <div
+                        className="col-4 "
+                        style={{
+                            height: 300,
+                        }}
+                    >
+                        <Placeholder xs={4} className="rounded w-100 h-100" />
+                    </div>{' '}
+                    <div
+                        className="col-4 "
+                        style={{
+                            height: 300,
+                        }}
+                    >
+                        <Placeholder xs={4} className="rounded w-100 h-100" />
+                    </div>{' '}
+                    <div
+                        className="col-4 "
+                        style={{
+                            height: 300,
+                        }}
+                    >
+                        <Placeholder xs={4} className="rounded w-100 h-100" />
+                    </div>{' '}
+                </Placeholder>
+            )}
         </div>
     );
 }
