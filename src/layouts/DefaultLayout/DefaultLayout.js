@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { getDetailPlaylist, getHome, getInfo, getSong } from '../../services/homeService';
 import ModalSm from '../../components/Modal/Modal';
 import RightSidebar from '../components/RightSidebar/RightSidebar';
+import dataHome from '../../data/dataHome';
 
 export const ThemeContext = createContext();
 
@@ -133,7 +134,7 @@ function DefaultLayout() {
 
     useEffect(() => {
         const getData = async () => {
-            const items = await getHome();
+            const items = dataHome.data.items;
             console.log('items', items);
 
             const banner = items.find((item) => item.sectionType === 'banner');

@@ -26,81 +26,21 @@ function Discovery() {
 
     return (
         <div>
-            {playlist.items ? (
-                <>
-                    <Slides />
-                    <NewMusic />
-                    <SectionPlaylist title={playlist.title} playlist={playlist.items} getPlaylist={methodGetPlaylist} />
-                    <SectionPlaylist
-                        title={playlist2.title}
-                        playlist={playlist2.items}
-                        getPlaylist={methodGetPlaylist}
-                        artist
-                    />
-                    <WeekChart items={weekChart.items} />
-                    <Artist artists={artistSpotlight.items} getPlaylist={methodGetPlaylist} />
+            <Slides />
+            <NewMusic />
+            <SectionPlaylist title={playlist.title} playlist={playlist.items} getPlaylist={methodGetPlaylist} />
+            <SectionPlaylist
+                title={playlist2.title}
+                playlist={playlist2.items}
+                getPlaylist={methodGetPlaylist}
+                artist
+            />
+            <WeekChart items={weekChart.items} />
+            <Artist artists={artistSpotlight.items} getPlaylist={methodGetPlaylist} />
 
-                    <SectionPlaylist
-                        title={top100.title}
-                        playlist={top100Discovery}
-                        getPlaylist={methodGetPlaylist}
-                        artist
-                    />
-                    <NewRelease items={newRelease.items} title={newRelease.title} link={newRelease.link} />
-                    <Sponsor />
-                </>
-            ) : (
-                <Placeholder className="row w-100 gx-2 gy-2 overflow-hidden" animation="glow">
-                    <div
-                        className="col-4 "
-                        style={{
-                            height: 300,
-                        }}
-                    >
-                        <Placeholder xs={4} className="rounded w-100 h-100" />
-                    </div>{' '}
-                    <div
-                        className="col-4 "
-                        style={{
-                            height: 300,
-                        }}
-                    >
-                        <Placeholder xs={4} className="rounded w-100 h-100" />
-                    </div>{' '}
-                    <div
-                        className="col-4 "
-                        style={{
-                            height: 300,
-                        }}
-                    >
-                        <Placeholder xs={4} className="rounded w-100 h-100" />
-                    </div>{' '}
-                    <div
-                        className="col-4 "
-                        style={{
-                            height: 300,
-                        }}
-                    >
-                        <Placeholder xs={4} className="rounded w-100 h-100" />
-                    </div>{' '}
-                    <div
-                        className="col-4 "
-                        style={{
-                            height: 300,
-                        }}
-                    >
-                        <Placeholder xs={4} className="rounded w-100 h-100" />
-                    </div>{' '}
-                    <div
-                        className="col-4 "
-                        style={{
-                            height: 300,
-                        }}
-                    >
-                        <Placeholder xs={4} className="rounded w-100 h-100" />
-                    </div>{' '}
-                </Placeholder>
-            )}
+            <SectionPlaylist title={top100.title} playlist={top100Discovery} getPlaylist={methodGetPlaylist} artist />
+            <NewRelease items={newRelease.items} title={newRelease.title} link={newRelease.link} />
+            <Sponsor />
         </div>
     );
 }

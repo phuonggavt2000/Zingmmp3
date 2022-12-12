@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-function SectionPlaylist({ title, playlist, getPlaylist, artist }) {
+function SectionPlaylist({ title, playlist, getPlaylist }) {
     return (
         <div className={cx('wrapper')}>
             {playlist && (
@@ -41,14 +41,7 @@ function SectionPlaylist({ title, playlist, getPlaylist, artist }) {
                                         {value.title}
                                     </Link>
 
-                                    <span className={cx('desc', { artist: artist })}>{value.sortDescription}</span>
-                                    <div className={cx('artist_name', { artist: artist })}>
-                                        {value.artists.map((artist, index) => (
-                                            <Link className="link-artist fs-7 " key={index}>
-                                                {artist.name}
-                                            </Link>
-                                        ))}
-                                    </div>
+                                    <span className={cx('desc')}>{value.sortDescription}</span>
                                 </div>
                             </Col>
                         ))}
