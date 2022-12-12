@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Player from '../components/Player/Player';
 import { createContext, useEffect } from 'react';
 import { useState } from 'react';
-import { getDetailPlaylist, getHome, getInfo, getSong } from '../../services/homeService';
+import { getDetailPlaylist, getInfo, getSong } from '../../services/homeService';
 import ModalSm from '../../components/Modal/Modal';
 import RightSidebar from '../components/RightSidebar/RightSidebar';
 import dataHome from '../../data/dataHome';

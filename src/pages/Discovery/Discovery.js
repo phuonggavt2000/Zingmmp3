@@ -7,7 +7,6 @@ import Slides from '../../layouts/components/Slides/Slides';
 import Sponsor from '../../layouts/components/Sponsor/Sponsor';
 import WeekChart from '../../layouts/components/WeekChart/WeekChart';
 import { ThemeContext } from '../../layouts/DefaultLayout/DefaultLayout';
-import { Placeholder } from 'react-bootstrap';
 
 function Discovery() {
     const [top100Discovery, setTop100Discovery] = useState([]);
